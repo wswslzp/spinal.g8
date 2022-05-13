@@ -1,0 +1,41 @@
+name: Scala CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+permissions:
+  contents: read
+
+jobs:
+  setup:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+        
+    - name: Cache SBT
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.ivy2/cache
+          ~/.sbt
+        key: ${{ runner.os }}-sbt-${{ hashFiles('**/build.sbt') }}
+        
+    - name: Generate template 
+      run: |
+        sbt new wswslzp/spinal.g8 --name=a1 --github_id=wswslzp --developer_url=wswslzp --project_url=wswslzp/a1 --description=hello
+        
+    - name: Compile template
+      run: cd a1 && sbt compile
+        
