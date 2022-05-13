@@ -1,6 +1,6 @@
 import spinal.core._
 import spinal.lib._
 
-class Stub {
-  // got any helpful boilerplate for your users?
+class Stub extends Module {
+  // A stub module begin
 }
