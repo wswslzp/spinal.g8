@@ -3,7 +3,7 @@ ThisBuild / organization := "com.github.$github_id$"
 ThisBuild / scalaVersion := "2.12.13"
 ThisBuild / version := "v0.1"
 
-val spinalVersion = "latest.release"
+val spinalVersion = "1.7.0"
 val spinal = Seq(
   "com.github.spinalhdl" %% "spinalhdl-core" % spinalVersion,
   "com.github.spinalhdl" %% "spinalhdl-lib" % spinalVersion,
