@@ -23,7 +23,8 @@ Template applied in /home/wswslzp/workspace/scala/./myproj
 After that, `sbt` will create a SpinalHDL project template with SBT file structure
 under current working directory.
 
-##Template license
+## Template license
+
 Written in 2022 by [wswslzp][me] <AUTHOR E-MAIL ADDRESS>
 
 To the extent possible under law, the author(s) have dedicated all copyright and related
