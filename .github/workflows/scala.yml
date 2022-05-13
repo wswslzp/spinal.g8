@@ -35,6 +35,7 @@ jobs:
     - name: Generate template 
       run: |
         sbt new wswslzp/spinal.g8 --name=a1 --github_id=wswslzp --developer_url=wswslzp --project_url=wswslzp/a1 --description=hello
+        ls
         
     - name: Compile template
       run: cd a1 && sbt compile
